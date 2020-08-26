@@ -1,36 +1,42 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import { createAppContainer } from 'react-navigation';
-import { createStackNavigator} from 'react-navigation-stack';
-import Home from './pages/Home';
-import Login from './pages/Login';
-import Feed from './pages/Feed';
-import MapView from './pages/MapView';
-
-const App = createStackNavigator({
-  //Constant which holds all the screens like index of any book 
-    Home: { screen: Home }, 
-    //First entry by default be our first screen 
-    //if we do not define initialRouteName
-    Login: { screen: Login }, 
-    Feed: {screen: Feed},
-    MapView: {screen: MapView},
-  },
-  
-  {
-  
-    initialRouteName: 'Home',
-  }
+import * as React from 'react';
+import { View, StyleSheet, Dimensions } from 'react-native';
+import { TabView, SceneMap } from 'react-native-tab-view';
+ 
+const FirstRoute = () => (
+  <View style={[styles.scene, { backgroundColor: '#ff4081' }]} />
 );
-export default createAppContainer(App);
-
+ 
+const SecondRoute = () => (
+  <View style={[styles.scene, { backgroundColor: '#673ab7' }]} />
+);
+ 
+const initialLayout = { width: Dimensions.get('window').width };
+ 
+export default function TabViewExample() {
+  const [index, setIndex] = React.useState(0);
+  const [routes] = React.useState([
+    { key: 'first', title: 'First' },
+    { key: 'second', title: 'Second' },
+  ]);
+ 
+  const renderScene = SceneMap({
+    first: FirstRoute,
+    second: SecondRoute,
+  });
+ 
+  return (
+    <TabView
+      navigationState={{ index, routes }}
+      renderScene={renderScene}
+      onIndexChange={setIndex}
+      initialLayout={initialLayout}
+    />
+  );
+}
+ 
 const styles = StyleSheet.create({
-  container: {
+  scene: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
   },
 });
 

@@ -16,6 +16,28 @@ export default class Home extends Component {
           <Text style = {styles.HeaderText}>
             home
           </Text>
+          <Button
+            title="Login"
+            type = "outline"
+            titleStyle={{ color: 'black', fontFamily: 'Avenir'}}
+            buttonStyle={styles.button}
+            onPress={() => navigate('Login')}
+          />
+          <Button
+            title="Feed"
+            type = "outline"
+            titleStyle={{ color: 'black', fontFamily: 'Avenir'}}
+            buttonStyle={styles.button}
+            onPress={() => navigate('Feed')}
+          />
+          <Button
+            title="MapView"
+            type = "outline"
+            titleStyle={{ color: 'black', fontFamily: 'Avenir'}}
+            buttonStyle={styles.button}
+            onPress={() => navigate('MapView')}
+          />
+
       </View>
     );
   }
