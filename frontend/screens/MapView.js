@@ -1,40 +1,19 @@
 import React, { Component } from 'react';
-//import react in our code.
-import { StyleSheet, View, TextInput, Text, Button, Alert, Image, ScrollView } from 'react-native';
-//import all the components we are going to use.
+import { StyleSheet, View, TextInput, Text, ScrollView} from 'react-native';
 
-export default class MapView extends Component {
-  static navigationOptions = {
-    //Setting the header of the screen
-    title: 'Map View',
-  };
-  
+export default class AddPost extends Component {
+  constructor(props) {
+        //constructor to set default state
+    super(props);
+    this.state = {
+      
+    };
+  }
   render(){
-   
-    return (
-      <View style={styles.container}>
-          <Text style = {styles.HeaderText}>
-            map view
-          </Text>
+    return(
+      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+        <Text>Map Screen</Text>
       </View>
     );
   }
 }
-
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    //alignItems: 'center',
-    padding: 16,
-    //marginBottom: 0,
-  },
-  HeaderText:{
-    fontSize: 22,
-    textAlign: 'center',
-    color: 'black',
-    fontFamily: 'Avenir',
-    fontWeight: "bold"
-  },
-});

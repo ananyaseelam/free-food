@@ -1,10 +1,19 @@
-import React from 'react'
-import { Text, Layout } from 'react-native-ui-kitten'
+import React, { Component } from 'react';
+import { StyleSheet, View, TextInput, Text, ScrollView} from 'react-native';
 
-const Feed = () => (
-  <Layout style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-    <Text>Feed Screen</Text>
-  </Layout>
-)
-
-export default Feed
+export default class AddPost extends Component {
+  constructor(props) {
+        //constructor to set default state
+    super(props);
+    this.state = {
+      
+    };
+  }
+  render(){
+    return(
+      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+        <Text>Feed Screen</Text>
+      </View>
+    );
+  }
+}
