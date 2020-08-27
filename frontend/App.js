@@ -1,42 +1,40 @@
-import * as React from 'react';
-import { View, StyleSheet, Dimensions } from 'react-native';
-import { TabView, SceneMap } from 'react-native-tab-view';
- 
-const FirstRoute = () => (
-  <View style={[styles.scene, { backgroundColor: '#ff4081' }]} />
-);
- 
-const SecondRoute = () => (
-  <View style={[styles.scene, { backgroundColor: '#673ab7' }]} />
-);
- 
-const initialLayout = { width: Dimensions.get('window').width };
- 
-export default function TabViewExample() {
-  const [index, setIndex] = React.useState(0);
-  const [routes] = React.useState([
-    { key: 'first', title: 'First' },
-    { key: 'second', title: 'Second' },
-  ]);
- 
-  const renderScene = SceneMap({
-    first: FirstRoute,
-    second: SecondRoute,
-  });
- 
-  return (
-    <TabView
-      navigationState={{ index, routes }}
-      renderScene={renderScene}
-      onIndexChange={setIndex}
-      initialLayout={initialLayout}
-    />
-  );
-}
- 
-const styles = StyleSheet.create({
-  scene: {
-    flex: 1,
-  },
-});
+import React from 'react'
+import { mapping, light as lightTheme } from '@eva-design/eva'
+import { ApplicationProvider, Layout, Text } from 'react-native-ui-kitten'
+import TabNavigator from './navigation/TabNavigator'
+import { AppLoading, Asset, Font, Icon } from 'expo';
 
+const ApplicationContent = () => (
+  <Layout style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+    <Text>Welcome to UI Kitten</Text>
+  </Layout>
+)
+
+export default class App extends React.Component {
+    state = {
+        isLoadingComplete: false,
+    };
+    render() {
+        return (
+            <ApplicationProvider mapping={mapping} theme={lightTheme}>
+                <TabNavigator/>
+            </ApplicationProvider>
+        );
+    }
+
+    _loadResourcesAsync = async () => {
+        return Promise.all([
+            Font.loadAsync({
+                'text-font-family': require('./assets/fonts/SpaceMono-Regular.ttf'),
+            }),
+        ]);
+    };
+
+    _handleLoadingError = error => {
+    console.warn(error);
+    };
+
+    _handleFinishLoading = () => {
+    this.setState({ isLoadingComplete: true });
+    };
+}
