@@ -1,7 +1,7 @@
 import React from 'react'
 import { createAppContainer } from 'react-navigation'
 import { createBottomTabNavigator } from 'react-navigation-tabs'
-
+import { Icon } from 'react-native-ui-kitten'
 import { FeedNavigator } from './StackNavigator'
 import MapView from '../screens/MapView'
 import AddPost from '../screens/AddPost'
@@ -13,7 +13,17 @@ const TabNavigator = createBottomTabNavigator({
       screen: Home
     },
     Feed: {
-      screen: FeedNavigator
+      screen: FeedNavigator,
+      navigationOptions: {
+        tabBarIcon: ({ focused }) => (
+          <Icon
+            name='home-outline'
+            width={32}
+            height={32}
+            fill={focused ? '#111' : '#939393'}
+          />
+        )
+      }
     },
     AddPost: {
       screen: AddPost
@@ -27,3 +37,6 @@ const TabNavigator = createBottomTabNavigator({
   })
   
   export default createAppContainer(TabNavigator)
+
+
+  
