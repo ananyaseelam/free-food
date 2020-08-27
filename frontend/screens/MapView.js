@@ -1,24 +1,4 @@
 import React, { Component } from 'react';
-<<<<<<< HEAD
-import { StyleSheet, View, TextInput, Text, ScrollView} from 'react-native';
-
-export default class AddPost extends Component {
-  constructor(props) {
-        //constructor to set default state
-    super(props);
-    this.state = {
-      
-    };
-  }
-  render(){
-    return(
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-        <Text>Map Screen</Text>
-      </View>
-    );
-  }
-}
-=======
 //import react in our code.
 import { StyleSheet, View, TextInput, Text, Button, Alert, Image, ScrollView } from 'react-native';
 //import all the components we are going to use.
@@ -54,8 +34,7 @@ const styles = StyleSheet.create({
     fontSize: 22,
     textAlign: 'center',
     color: 'black',
-    fontFamily: 'Avenir',
+    fontFamily: 'System',
     fontWeight: "bold"
   },
 });
->>>>>>> caleb-working

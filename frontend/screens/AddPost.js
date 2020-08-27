@@ -25,7 +25,6 @@ export default class AddPost extends Component {
   }
 
   handleSubmit = () => {
-<<<<<<< HEAD
     this.sendPost()
   }
 
@@ -44,21 +43,13 @@ export default class AddPost extends Component {
     }
     fetch('', postData)
   };
-=======
-    //needs to send data to backend
-  }
 
->>>>>>> caleb-working
 
 
   render(){
     return(
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-<<<<<<< HEAD
         <Text>Add Post Screen 
-=======
-        <Text>Add Post Screen
->>>>>>> caleb-working
         {"\n"}
         Food: {this.state.food_name}
         {"\n"}
@@ -66,37 +57,22 @@ export default class AddPost extends Component {
         {"\n"}
         Description: {this.state.description}
         </Text>
-<<<<<<< HEAD
         
 
         <TextInput
           style={styles.input}
-=======
-
-
-        <TextInput
-          style={{ height: 40, borderColor: 'gray', borderWidth: 1, }}
->>>>>>> caleb-working
           value = {this.state.food_name}
           placeholder="     Food Name      "
           onChangeText={this.handleFoodChange}
         />
         <TextInput
-<<<<<<< HEAD
           style={styles.input}
-=======
-          style={{ height: 40, borderColor: 'gray', borderWidth: 1 }}
->>>>>>> caleb-working
           value = {this.state.location}
           placeholder="     Location     "
           onChangeText={this.handleLocationChange}
         />
         <TextInput
-<<<<<<< HEAD
           style={styles.input}
-=======
-          style={{ height: 40, borderColor: 'gray', borderWidth: 1 }}
->>>>>>> caleb-working
           value = {this.state.description}
           placeholder="     Description     "
           onChangeText={this.handleDescriptionChange}
@@ -110,7 +86,6 @@ export default class AddPost extends Component {
       </View>
     );
   }
-<<<<<<< HEAD
 }
 
 const styles = StyleSheet.create({
@@ -155,6 +130,3 @@ const styles = StyleSheet.create({
     borderRadius: 3,
   },
 });
-=======
-}
->>>>>>> caleb-working
