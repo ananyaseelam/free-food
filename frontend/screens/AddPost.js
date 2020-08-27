@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { StyleSheet, View, TextInput, Text, ScrollView, Button} from 'react-native';
-
+import { Input} from '@ui-kitten/components';
+import { ApplicationProvider, Layout, IconRegistry } from 'react-native-ui-kitten'
+import { mapping, light as lightTheme } from '@eva-design/eva'
 export default class AddPost extends Component {
   constructor(props) {
         //constructor to set default state
@@ -49,7 +51,10 @@ export default class AddPost extends Component {
   render(){
     return(
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-        <Text>Add Post Screen 
+        <Text style={styles.HeaderText}>Add Posting Here: </Text>
+        <Text style= {styles.baseText}>
+
+        
         {"\n"}
         Food: {this.state.food_name}
         {"\n"}
@@ -57,29 +62,27 @@ export default class AddPost extends Component {
         {"\n"}
         Description: {this.state.description}
         </Text>
-        
-
         <TextInput
           style={styles.input}
           value = {this.state.food_name}
-          placeholder="     Food Name      "
+          placeholder=" Food Name "
           onChangeText={this.handleFoodChange}
         />
         <TextInput
           style={styles.input}
           value = {this.state.location}
-          placeholder="     Location     "
+          placeholder=" Pickup Location "
           onChangeText={this.handleLocationChange}
         />
         <TextInput
           style={styles.input}
           value = {this.state.description}
-          placeholder="     Description     "
+          placeholder=" Description "
           onChangeText={this.handleDescriptionChange}
         />
 
         <Button
-          title="Submit"
+          title="Create Post"
           onSubmit={() => postData()//send data to backend
         }
         />
@@ -96,37 +99,32 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     //justifyContent: 'center',
   },
-  container1:{
-    flex: 1,
-    //backgroundColor: '#FF6347',
-    borderRadius: 20,
-    borderColor: '#46b4ff',
-    borderWidth:5,
-    alignItems: 'center',
-    backgroundColor:'#E6F0FF',
-    
-  },
-  container2:{
-    flex: 1,
-    //backgroundColor: '#FF6347',
-    borderRadius: 15,
-    paddingHorizontal:70,
-    paddingTop:15,
-    borderColor: '#46b4ff',
-    borderWidth:5,
-    alignItems: 'center',
-    backgroundColor:'#E6F0FF',
-    
-  },
   input: {
     borderWidth: 1,
     borderColor: 'black',
-    minWidth: 100,
+    minWidth: 250,
     marginTop: 20,
     marginBottom:10,
     marginHorizontal: 20,
-    //paddingHorizontal: 10,
-    //paddingVertical: 5,
+    paddingHorizontal: 10,
+    paddingVertical: 5,
     borderRadius: 3,
   },
+  HeaderText:{
+    fontSize: 22,
+    textAlign: 'center',
+    color: 'black',
+    fontFamily: 'System',
+    fontWeight: "bold",
+    justifyContent:'flex-start',
+    margin: 5,
+  },
+  baseText:{
+    fontSize: 18,
+    textAlign: 'center',
+    color: 'black',
+    fontFamily: 'System',
+    fontWeight: "bold",
+    justifyContent:'space-evenly'
+  }
 });
