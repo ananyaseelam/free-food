@@ -25,7 +25,7 @@ export default class App extends React.Component {
     _loadResourcesAsync = async () => {
         return Promise.all([
             Font.loadAsync({
-                'text-font-family': require('./assets/fonts/SpaceMono-Regular.ttf'),
+//                'text-font-family': require('./assets/fonts/SpaceMono-Regular.ttf'),
             }),
         ]);
     };
