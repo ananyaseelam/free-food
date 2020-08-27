@@ -1,21 +1,44 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React, {Fragment} from 'react'
+import { mapping, light as lightTheme } from '@eva-design/eva'
+import { ApplicationProvider, Layout, Text,IconRegistry } from 'react-native-ui-kitten'
+import TabNavigator from './navigation/TabNavigator'
+import { AppLoading, Asset, Font, Icon } from 'expo';
+import { EvaIconsPack } from '@ui-kitten/eva-icons'
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>hello world</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+const ApplicationContent = () => (
+  <Layout style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+    <Text>Welcome to UI Kitten</Text>
+  </Layout>
+)
+
+export default class App extends React.Component {
+    state = {
+        isLoadingComplete: false,
+    };
+    render() {
+        return (
+            <Fragment>
+            <IconRegistry icons={EvaIconsPack} />
+            <ApplicationProvider mapping={mapping} theme={lightTheme}>
+              <TabNavigator />
+            </ApplicationProvider>
+          </Fragment>
+        );
+    }
+
+    _loadResourcesAsync = async () => {
+        return Promise.all([
+            Font.loadAsync({
+//                'text-font-family': require('./assets/fonts/SpaceMono-Regular.ttf'),
+            }),
+        ]);
+    };
+
+    _handleLoadingError = error => {
+    console.warn(error);
+    };
+
+    _handleFinishLoading = () => {
+    this.setState({ isLoadingComplete: true });
+    };
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
