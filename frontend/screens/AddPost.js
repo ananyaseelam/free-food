@@ -3,6 +3,7 @@ import { StyleSheet, View, TextInput, Text, ScrollView, Button} from 'react-nati
 import { Input} from '@ui-kitten/components';
 import { ApplicationProvider, Layout, IconRegistry } from 'react-native-ui-kitten'
 import { mapping, light as lightTheme } from '@eva-design/eva'
+
 export default class AddPost extends Component {
   constructor(props) {
         //constructor to set default state
@@ -11,6 +12,7 @@ export default class AddPost extends Component {
       food_name: '',
       location:'',
       description:'',
+      avatarSource: '',
     };
   }
 
@@ -45,15 +47,12 @@ export default class AddPost extends Component {
     }
     fetch('', postData)
   };
-
-
-
+ 
   render(){
     return(
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
         <Text style={styles.HeaderText}>Add Posting Here: </Text>
         <Text style= {styles.baseText}>
-
         
         {"\n"}
         Food: {this.state.food_name}
@@ -103,7 +102,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: 'black',
     minWidth: 250,
-    marginTop: 20,
+    marginTop: 10,
     marginBottom:10,
     marginHorizontal: 20,
     paddingHorizontal: 10,
