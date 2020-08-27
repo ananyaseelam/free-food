@@ -6,7 +6,7 @@ import { StyleSheet, View, TextInput, Text, Button, Alert, Image, ScrollView } f
 export default class Home extends Component {
   static navigationOptions = {
     //Setting the header of the screen
-    title: 'Home',
+    title: 'Map View',
   };
 
   render(){
@@ -14,7 +14,7 @@ export default class Home extends Component {
     return (
       <View style={styles.container}>
           <Text style = {styles.HeaderText}>
-            home
+            map view
           </Text>
       </View>
     );

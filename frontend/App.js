@@ -1,8 +1,9 @@
-import React from 'react'
+import React, {Fragment} from 'react'
 import { mapping, light as lightTheme } from '@eva-design/eva'
-import { ApplicationProvider, Layout, Text } from 'react-native-ui-kitten'
+import { ApplicationProvider, Layout, Text,IconRegistry } from 'react-native-ui-kitten'
 import TabNavigator from './navigation/TabNavigator'
 import { AppLoading, Asset, Font, Icon } from 'expo';
+import { EvaIconsPack } from '@ui-kitten/eva-icons'
 
 const ApplicationContent = () => (
   <Layout style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
@@ -16,9 +17,12 @@ export default class App extends React.Component {
     };
     render() {
         return (
+            <Fragment>
+            <IconRegistry icons={EvaIconsPack} />
             <ApplicationProvider mapping={mapping} theme={lightTheme}>
-                <TabNavigator/>
+              <TabNavigator />
             </ApplicationProvider>
+          </Fragment>
         );
     }
 
