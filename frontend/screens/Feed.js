@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { StyleSheet, View, TextInput, Text, ScrollView} from 'react-native';
+import { StyleSheet,Image, View, TouchableOpacity } from 'react-native'
+import { Avatar, withStyles, List } from 'react-native-ui-kitten'
 
-export default class AddPost extends Component {
+export default class Feed extends Component {
   constructor(props) {
         //constructor to set default state
     super(props);
