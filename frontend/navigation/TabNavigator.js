@@ -14,16 +14,6 @@ const TabNavigator = createBottomTabNavigator({
     },
     Feed: {
       screen: FeedNavigator,
-      navigationOptions: {
-        tabBarIcon: ({ focused }) => (
-          <Icon
-            name='home-outline'
-            width={32}
-            height={32}
-            fill={focused ? '#111' : '#939393'}
-          />
-        )
-      }
     },
     AddPost: {
       screen: AddPost

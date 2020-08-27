@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
     fontSize: 22,
     textAlign: 'center',
     color: 'black',
-    fontFamily: 'Avenir',
+    fontFamily: 'System',
     fontWeight: "bold"
   },
 });
