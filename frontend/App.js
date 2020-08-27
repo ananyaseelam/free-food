@@ -1,18 +1,40 @@
-import React, { Fragment }from 'react'
+import React from 'react'
 import { mapping, light as lightTheme } from '@eva-design/eva'
-import { ApplicationProvider, IconRegistry, Layout, Text } from 'react-native-ui-kitten'
-import TabNavigator from './screens/TabNavigator'
+import { ApplicationProvider, Layout, Text } from 'react-native-ui-kitten'
+import TabNavigator from './navigation/TabNavigator'
+import { AppLoading, Asset, Font, Icon } from 'expo';
 
-import { EvaIconsPack } from '@ui-kitten/eva-icons'
-
-
-const App = () => (
-  <Fragment>
-    <IconRegistry icons={EvaIconsPack} />
-    <ApplicationProvider mapping={mapping} theme={lightTheme}>
-      <TabNavigator />
-    </ApplicationProvider>
-  </Fragment>
+const ApplicationContent = () => (
+  <Layout style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+    <Text>Welcome to UI Kitten</Text>
+  </Layout>
 )
 
-export default App
+export default class App extends React.Component {
+    state = {
+        isLoadingComplete: false,
+    };
+    render() {
+        return (
+            <ApplicationProvider mapping={mapping} theme={lightTheme}>
+                <TabNavigator/>
+            </ApplicationProvider>
+        );
+    }
+
+    _loadResourcesAsync = async () => {
+        return Promise.all([
+            Font.loadAsync({
+//                'text-font-family': require('./assets/fonts/SpaceMono-Regular.ttf'),
+            }),
+        ]);
+    };
+
+    _handleLoadingError = error => {
+    console.warn(error);
+    };
+
+    _handleFinishLoading = () => {
+    this.setState({ isLoadingComplete: true });
+    };
+}

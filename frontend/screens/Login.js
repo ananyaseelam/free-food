@@ -1,32 +1,13 @@
+@@ -0,0 +1,40 @@
 import React, { Component } from 'react';
-<<<<<<< HEAD
-import { StyleSheet, View, TextInput, Text, ScrollView} from 'react-native';
-
-export default class AddPost extends Component {
-  constructor(props) {
-        //constructor to set default state
-    super(props);
-    this.state = {
-      
-    };
-  }
-  render(){
-    return(
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-        <Text>Map Screen</Text>
-      </View>
-    );
-  }
-}
-=======
 //import react in our code.
 import { StyleSheet, View, TextInput, Text, Button, Alert, Image, ScrollView } from 'react-native';
 //import all the components we are going to use.
 
-export default class Home extends Component {
+export default class Login extends Component {
   static navigationOptions = {
     //Setting the header of the screen
-    title: 'Home',
+    title: 'Login',
   };
 
   render(){
@@ -34,7 +15,7 @@ export default class Home extends Component {
     return (
       <View style={styles.container}>
           <Text style = {styles.HeaderText}>
-            home
+            login
           </Text>
       </View>
     );
@@ -58,4 +39,3 @@ const styles = StyleSheet.create({
     fontWeight: "bold"
   },
 });
->>>>>>> caleb-working
