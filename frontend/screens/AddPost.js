@@ -39,7 +39,9 @@ export default class AddPost extends Component {
         {"\n"}
         Location: {this.state.location}
         {"\n"}
+        Description: {this.state.description}
         </Text>
+        
 
         <TextInput
           style={{ height: 40, borderColor: 'gray', borderWidth: 1, }}
@@ -52,6 +54,12 @@ export default class AddPost extends Component {
           value = {this.state.location}
           placeholder="     Location     "
           onChangeText={this.handleLocationChange}
+        />
+        <TextInput
+          style={{ height: 40, borderColor: 'gray', borderWidth: 1 }}
+          value = {this.state.description}
+          placeholder="     Description     "
+          onChangeText={this.handleDescriptionChange}
         />
 
         <Button
