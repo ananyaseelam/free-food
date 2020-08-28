@@ -8,7 +8,9 @@ export const FeedNavigator = createAppContainer(
     Feed: {
       screen: Feed,
       navigationOptions: {
-        headerTitle: 'Social App'
+        headerTitle: 'Social App',
+        headerStyle: { backgroundColor: '#B31B1B' },
+        headerTitleStyle: { color: '#F7F7F7' }
       }
     }
   })

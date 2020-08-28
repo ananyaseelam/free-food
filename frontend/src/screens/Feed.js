@@ -2,32 +2,38 @@ import React, { Component } from 'react';
 import { Image, View, TouchableOpacity, StyleSheet, FlatList } from 'react-native'
 import { Text, Avatar, List } from '@ui-kitten/components'
 
-import UserHeader from '../components/UserHeader'
+import PostInfo from '../components/PostInfo'
 
 const DATA = [
     {
         id: 1,
-        postTitle: 'Planet of Nature',
+        title: 'Pizza',
         user: {
             name: 'Caleb Biddulph',
             avatarURI:'https://images.unsplash.com/photo-1559526323-cb2f2fe2591b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80'
         },
+        date: '5/19/2020',
+        time: '3:03 pm',
         imageURI:
         'https://images.unsplash.com/photo-1482822683622-00effad5052e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80',
-        randomText:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. '
+        description:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        tags: "vegetarian, kosher, gluten-free"
     },
     {
         id: 2,
-        postTitle: 'Lamppost',
+        title: 'Donuts',
         user: {
             name: 'Ananya Seelam',
             avatarURI:'https://images.unsplash.com/photo-1559526323-cb2f2fe2591b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80'
         },
+        date: '5/20/2020',
+        time: '12:28 am',
         imageURI:
         'https://images.unsplash.com/photo-1482822683622-00effad5052e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80',
-        randomText:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. '
+        description:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ',
+        tags: "vegan"
     }
 ]
 
@@ -43,18 +49,19 @@ export default class Feed extends Component {
     render() {
         const renderItem = ({ item }) => (
           <View style={styles.card}>
-            <View style={styles.cardHeader}>
-                <Text category='s1' style={styles.cardTitle}>
-                    {item.postTitle}
-                </Text>
-            </View>
-            <UserHeader navigation={this.props.navigation} user={item.user} />
+            <Text category='h2' style={styles.title}>
+                {item.title}
+            </Text>
+            <PostInfo
+                navigation={this.props.navigation} user={item.user}
+                date={item.date} time={item.time} />
             <Image
               source={{ uri: item.imageURI }}
-              style={styles.cardImage}
+              style={styles.image}
             />
-            <View style={styles.cardContent}>
-              <Text category='p2'>{item.randomText}</Text>
+            <View style={styles.content}>
+              <Text category='p2' style={styles.description} >{item.description}</Text>
+              <Text category='p2' style={styles.tags} >Tags: {item.tags}</Text>
             </View>
           </View>
         )
@@ -70,23 +77,39 @@ export default class Feed extends Component {
 }
 
 const styles = StyleSheet.create({
+
     container: {
-        flex: 1
+        flex: 1,
+        backgroundColor: '#F7F7F7',
+        padding: 12,
     },
     card: {
-        backgroundColor: 'white',
-        marginBottom: 25
+        backgroundColor: '#222',
+        marginBottom: 10,
+        borderRadius: 15,
+        paddingHorizontal: 20,
+        paddingTop: 10,
+        paddingBottom: 15
     },
-    cardImage: {
-        width: '100%',
-        height: 300
+    image: {
+        height: 300,
+        borderRadius: 6,
+        marginVertical: 10,
     },
-    cardTitle: {
-        color: 'white'
+    title: {
+        textAlign: 'center',
+        color: '#F7F7F7',
+        marginBottom: 7,
     },
-    cardContent: {
-        padding: 10,
-        borderWidth: 0.25,
-        borderColor: 'white'
-    }
+    content: {
+        margin: 0,
+    },
+    description: {
+        color: '#F7F7F7'
+    },
+    tags: {
+        marginTop: 5,
+        color: '#F7F7F7',
+        opacity: 0.7
+    },
 });

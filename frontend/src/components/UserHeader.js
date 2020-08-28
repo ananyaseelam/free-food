@@ -4,31 +4,31 @@ import { Text, Avatar, List } from '@ui-kitten/components'
 
 export default function UserHeader(props) {
     return (
-        <View style={styles.container}>
-            <TouchableOpacity
-                onPress={() => props.navigation.navigate('Profile')}>
-                <Avatar
-                    source={{ uri: props.user.avatarURI }}
-                    size='small'
-                    style={styles.avatar}
-                />
-            </TouchableOpacity>
-            <Text category='s1' style={styles.name}>
+        <TouchableOpacity style={styles.container}
+            onPress={() => props.navigation.navigate('Profile')}>
+            <Avatar
+                source={{ uri: props.user.avatarURI }}
+                size='tiny'
+                style={styles.avatar}
+            />
+            <Text category='s1' style={styles.text} style={styles.name}>
                 {props.user.name}
             </Text>
-        </View>
+        </TouchableOpacity>
     )
 }
 
 const styles = StyleSheet.create({
     container: {
-        padding: 12,
         flexDirection: 'row',
-        alignItems: 'center',
+        alignItems: 'center'
     },
     avatar: {
+        borderWidth: StyleSheet.hairlineWidth,
+        borderColor: '#F7F7F7'
     },
     name: {
-        marginLeft: 8
+        marginLeft: 7,
+        color: '#F7F7F7'
     }
 })
