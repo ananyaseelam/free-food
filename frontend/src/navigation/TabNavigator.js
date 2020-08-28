@@ -10,20 +10,20 @@ import Profile from '../screens/Profile'
 
 const TabNavigator = createBottomTabNavigator({
     Home: {
-      screen: Home
+        screen: Home
     },
     Feed: {
-      screen: FeedNavigator
+        screen: FeedNavigator
     },
     AddPost: {
-      screen: AddPost
+        screen: AddPost
     },
     MapView: {
-      screen: MapView
+        screen: MapView
     },
     Profile: {
-      screen: Profile
+        screen: Profile
     }
-  })
+})
   
-  export default createAppContainer(TabNavigator)
+export default createAppContainer(TabNavigator)

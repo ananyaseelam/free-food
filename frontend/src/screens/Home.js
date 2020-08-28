@@ -10,12 +10,33 @@ export default class Home extends Component {
   };
 
   render(){
-
     return (
       <View style={styles.container}>
           <Text style = {styles.HeaderText}>
             home
           </Text>
+          <Button
+            title="Login"
+            type = "outline"
+//            titleStyle={{ color: 'black', fontFamily: 'Avenir'}}
+            buttonStyle={styles.button}
+            onPress={() => navigate('Login')}
+          />
+          <Button
+            title="Feed"
+            type = "outline"
+//            titleStyle={{ color: 'black', fontFamily: 'Avenir'}}
+            buttonStyle={styles.button}
+            onPress={() => navigate('Feed')}
+          />
+          <Button
+            title="MapView"
+            type = "outline"
+//            titleStyle={{ color: 'black', fontFamily: 'Avenir'}}
+            buttonStyle={styles.button}
+            onPress={() => navigate('MapView')}
+          />
+
       </View>
     );
   }
@@ -34,7 +55,7 @@ const styles = StyleSheet.create({
     fontSize: 22,
     textAlign: 'center',
     color: 'black',
-    fontFamily: 'Avenir',
+//    fontFamily: 'normal',
     fontWeight: "bold"
   },
 });

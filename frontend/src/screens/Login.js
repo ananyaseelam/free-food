@@ -1,4 +1,3 @@
-@@ -0,0 +1,40 @@
 import React, { Component } from 'react';
 //import react in our code.
 import { StyleSheet, View, TextInput, Text, Button, Alert, Image, ScrollView } from 'react-native';
@@ -35,7 +34,7 @@ const styles = StyleSheet.create({
     fontSize: 22,
     textAlign: 'center',
     color: 'black',
-    fontFamily: 'Avenir',
+//    fontFamily: 'Avenir',
     fontWeight: "bold"
   },
 });
