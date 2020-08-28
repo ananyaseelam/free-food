@@ -4,12 +4,7 @@ import { ApplicationProvider, Layout, Text,IconRegistry } from 'react-native-ui-
 import TabNavigator from './navigation/TabNavigator'
 import { AppLoading, Asset, Font, Icon } from 'expo';
 import { EvaIconsPack } from '@ui-kitten/eva-icons'
-
-const ApplicationContent = () => (
-  <Layout style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-    <Text>Welcome to UI Kitten</Text>
-  </Layout>
-)
+import Firebase, { FirebaseProvider } from './utils'
 
 export default class App extends React.Component {
     state = {
@@ -20,7 +15,7 @@ export default class App extends React.Component {
             <Fragment>
             <IconRegistry icons={EvaIconsPack} />
             <ApplicationProvider mapping={mapping} theme={lightTheme}>
-              <TabNavigator />
+                <TabNavigator />
             </ApplicationProvider>
           </Fragment>
         );
