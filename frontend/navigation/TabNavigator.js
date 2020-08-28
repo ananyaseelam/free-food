@@ -8,26 +8,13 @@ import Home from '../screens/Home'
 import Profile from '../screens/Profile'
 import { Icon } from 'react-native-ui-kitten'
 const TabNavigator = createBottomTabNavigator({
-    Home: {
-      screen: Home,
-      navigationOptions: {
-        tabBarIcon: ({ focused }) => (
-          <Icon
-            name='home-outline'
-            width={32}
-            height={32}
-            fill={focused ? '#111' : '#939393'}
-          />
-        )
-      }
 
-    },
     Feed: {
       screen: FeedNavigator,
       navigationOptions: {
         tabBarIcon: ({ focused }) => (
           <Icon
-            name='heart-outline'
+            name='home-outline'
             width={32}
             height={32}
             fill={focused ? '#111' : '#939393'}

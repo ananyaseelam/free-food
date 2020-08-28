@@ -5,7 +5,7 @@ import { Text, Avatar, withStyles, List } from 'react-native-ui-kitten'
 const DATA = [
     {
         id: 1,
-        postTitle: 'Planet of Nature',
+        postTitle: 'Food 1',
         avatarURI:
         'https://images.unsplash.com/photo-1559526323-cb2f2fe2591b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80',
         imageURI:
@@ -15,7 +15,7 @@ const DATA = [
     },
     {
         id: 2,
-        postTitle: 'Lampost',
+        postTitle: 'Food 2',
         avatarURI:
         'https://images.unsplash.com/photo-1559526323-cb2f2fe2591b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80',
         imageURI:
