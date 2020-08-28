@@ -71,20 +71,3 @@ export default function App() {
       );
 
     }
-
-    _loadResourcesAsync = async () => {
-        return Promise.all([
-            Font.loadAsync({
-//                'text-font-family': require('./assets/fonts/SpaceMono-Regular.ttf'),
-            }),
-        ]);
-    };
-
-    _handleLoadingError = error => {
-    console.warn(error);
-    };
-
-    _handleFinishLoading = () => {
-    this.setState({ isLoadingComplete: true });
-    };
-}
