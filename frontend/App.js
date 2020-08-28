@@ -4,15 +4,14 @@ import { ApplicationProvider, Layout, Text,IconRegistry } from 'react-native-ui-
 import TabNavigator from './navigation/TabNavigator'
 import { AppLoading, Asset, Font, Icon } from 'expo';
 import { EvaIconsPack } from '@ui-kitten/eva-icons'
-import Firebase, { FirebaseProvider } from './utils'
 import 'react-native-gesture-handler';
 import { firebase } from './src/firebase/config'
 import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
-import { LoginScreen, HomeScreen, RegistrationScreen } from './screens'
-import {decode, encode} from 'base-64'
-if (!global.btoa) {  global.btoa = encode }
-if (!global.atob) { global.atob = decode }
+import RegistrationScreen from './screens/Registration'
+import LoginScreen from './screens/Login'
+import HomeScreen from './screens/Home'
+
 
 const Stack = createStackNavigator();
 

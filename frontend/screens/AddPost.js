@@ -3,7 +3,6 @@ import { StyleSheet, View, TextInput, Text, ScrollView, Button} from 'react-nati
 import { Input} from '@ui-kitten/components';
 import { ApplicationProvider, Layout, IconRegistry } from 'react-native-ui-kitten'
 import { mapping, light as lightTheme } from '@eva-design/eva'
-import { withFirebaseHOC } from '../utils'
 import ImagePicker from 'react-native-image-picker'
 export default class AddPost extends Component {
   constructor(props) {

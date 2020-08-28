@@ -8,7 +8,7 @@ export const FeedNavigator = createAppContainer(
     Feed: {
       screen: Feed,
       navigationOptions: {
-        headerTitle: 'Social App'
+        headerTitle: 'Feed'
       }
     }
   })
