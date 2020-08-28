@@ -2,25 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5337bcad-9a95-406e-80ae-8242ebd30608" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/assets/fonts/avenir/AvenirLTStd-Book.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/assets/fonts/avenir/AvenirLTStd-Medium.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/assets/fonts/avenir/AvenirLTStd-Roman.otf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/navigation/StackNavigator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/navigation/TabNavigator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/pages/Feed.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/pages/Home.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/pages/Login.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/pages/MapView.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/screens/AddPost.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/screens/Feed.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/screens/Home.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/screens/Login.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/screens/MapView.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/screens/Profile.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/screens/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/screens/Home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/screens/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/screens/Login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/screens/MapView.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/screens/MapView.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/UserHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/UserHeader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/navigation/TabNavigator.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/navigation/TabNavigator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/screens/Feed.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/screens/Feed.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

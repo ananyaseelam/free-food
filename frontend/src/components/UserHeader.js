@@ -2,19 +2,19 @@ import React, {Component} from 'react';
 import { StyleSheet, View, TouchableOpacity } from 'react-native'
 import { Text, Avatar, List } from '@ui-kitten/components'
 
-export default function UserHeader({navigation, user}) {
+export default function UserHeader(props) {
     return (
         <View style={styles.container}>
             <TouchableOpacity
-                onPress={() => navigation.navigate('Profile')}>
+                onPress={() => props.navigation.navigate('Profile')}>
                 <Avatar
-                    source={{ uri: user.avatarURI }}
+                    source={{ uri: props.user.avatarURI }}
                     size='small'
                     style={styles.avatar}
                 />
             </TouchableOpacity>
             <Text category='s1' style={styles.name}>
-                {user.name}
+                {props.user.name}
             </Text>
         </View>
     )

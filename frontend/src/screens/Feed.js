@@ -48,7 +48,7 @@ export default class Feed extends Component {
                     {item.postTitle}
                 </Text>
             </View>
-            <UserHeader user={this.props.navigation, item.user} />
+            <UserHeader navigation={this.props.navigation} user={item.user} />
             <Image
               source={{ uri: item.imageURI }}
               style={styles.cardImage}
