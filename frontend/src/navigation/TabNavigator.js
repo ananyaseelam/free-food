@@ -1,12 +1,13 @@
 import React from 'react'
 import { createAppContainer } from 'react-navigation'
-import { createBottomTabNavigator } from 'react-navigation-tabs'
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
+import { Icon } from '@ui-kitten/components'
 import { FeedNavigator } from './StackNavigator'
 import MapView from '../screens/MapView'
 import AddPost from '../screens/AddPost'
 import Home from '../screens/Home'
 import Profile from '../screens/Profile'
-import { Icon } from 'react-native-ui-kitten'
+
 const TabNavigator = createBottomTabNavigator({
     Home: {
       screen: Home,
@@ -74,9 +75,6 @@ const TabNavigator = createBottomTabNavigator({
         )
       }
     }
-  })
+})
   
-  export default createAppContainer(TabNavigator)
-
-
-  
+export default createAppContainer(TabNavigator)
